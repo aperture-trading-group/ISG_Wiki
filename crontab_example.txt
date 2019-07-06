@@ -1,0 +1,2 @@
+MAILTO="servicedesk@aperture-trading.com"
+0 2 * * * /scripts/used/backupwiki.sh
