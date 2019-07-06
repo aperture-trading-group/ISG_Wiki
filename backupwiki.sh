@@ -11,7 +11,7 @@ sudo tar zcvhf /tmp/wikibackup/wikidata$(date +%s).tgz /var/www/html
 sed '2i$wgReadOnly = "Dumping Database, Access will be restored shortly";' /var/www/html/LocalSettings.php > temp.txt
 sudo mv temp.txt /var/www/html/LocalSettings.php -f
 sudo systemctl restart httpd
-sudo mysqldump -u wiki_user --password=Mltqtgyze1\! it_wiki | gzip > /tmp/wikibackup/sqldata$(date +%s).sql.gz
+sudo mysqldump -u wiki_user --password=********* it_wiki | gzip > /tmp/wikibackup/sqldata$(date +%s).sql.gz
 sudo sed "2d" /var/www/html/LocalSettings.php > temp.txt
 sudo mv temp.txt /var/www/html/LocalSettings.php -f
 sudo systemctl restart httpd
